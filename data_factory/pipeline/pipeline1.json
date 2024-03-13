@@ -862,7 +862,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['verified']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_verified"
+									"name": "quotedTweet_mentionedUsers_verified",
+									"type": "String"
 								}
 							},
 							{
@@ -870,7 +871,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['created']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_created"
+									"name": "quotedTweet_mentionedUsers_created",
+									"type": "String"
 								}
 							},
 							{
@@ -878,7 +880,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['followersCount']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_followersCount"
+									"name": "quotedTweet_mentionedUsers_followersCount",
+									"type": "String"
 								}
 							},
 							{
@@ -886,7 +889,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['friendsCount']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_friendsCount"
+									"name": "quotedTweet_mentionedUsers_friendsCount",
+									"type": "String"
 								}
 							},
 							{
@@ -894,7 +898,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['statusesCount']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_statusesCount"
+									"name": "quotedTweet_mentionedUsers_statusesCount",
+									"type": "String"
 								}
 							},
 							{
@@ -902,7 +907,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['favouritesCount']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_favouritesCount"
+									"name": "quotedTweet_mentionedUsers_favouritesCount",
+									"type": "String"
 								}
 							},
 							{
@@ -910,7 +916,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['listedCount']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_listedCount"
+									"name": "quotedTweet_mentionedUsers_listedCount",
+									"type": "String"
 								}
 							},
 							{
@@ -918,7 +925,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['mediaCount']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_mediaCount"
+									"name": "quotedTweet_mentionedUsers_mediaCount",
+									"type": "String"
 								}
 							},
 							{
@@ -926,7 +934,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['location']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_location"
+									"name": "quotedTweet_mentionedUsers_location",
+									"type": "String"
 								}
 							},
 							{
@@ -934,7 +943,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['protected']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_protected"
+									"name": "quotedTweet_mentionedUsers_protected",
+									"type": "String"
 								}
 							},
 							{
@@ -942,7 +952,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['linkUrl']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_linkUrl"
+									"name": "quotedTweet_mentionedUsers_linkUrl",
+									"type": "String"
 								}
 							},
 							{
@@ -950,7 +961,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['linkTcourl']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_linkTcourl"
+									"name": "quotedTweet_mentionedUsers_linkTcourl",
+									"type": "String"
 								}
 							},
 							{
@@ -958,7 +970,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['profileImageUrl']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_profileImageUrl"
+									"name": "quotedTweet_mentionedUsers_profileImageUrl",
+									"type": "String"
 								}
 							},
 							{
@@ -966,7 +979,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['profileBannerUrl']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_profileBannerUrl"
+									"name": "quotedTweet_mentionedUsers_profileBannerUrl",
+									"type": "String"
 								}
 							},
 							{
@@ -974,7 +988,8 @@
 									"path": "$['quotedTweet']['mentionedUsers'][0]['url']"
 								},
 								"sink": {
-									"name": "quotedTweet_mentionedUsers_url"
+									"name": "quotedTweet_mentionedUsers_url",
+									"type": "String"
 								}
 							},
 							{
@@ -982,7 +997,8 @@
 									"path": "$['mentionedUsers'][0]['username']"
 								},
 								"sink": {
-									"name": "mentionedUsers_username"
+									"name": "mentionedUsers_username",
+									"type": "String"
 								}
 							},
 							{
@@ -990,7 +1006,8 @@
 									"path": "$['mentionedUsers'][0]['displayname']"
 								},
 								"sink": {
-									"name": "mentionedUsers_displayname"
+									"name": "mentionedUsers_displayname",
+									"type": "String"
 								}
 							},
 							{
@@ -998,7 +1015,8 @@
 									"path": "$['mentionedUsers'][0]['id']"
 								},
 								"sink": {
-									"name": "mentionedUsers_id"
+									"name": "mentionedUsers_id",
+									"type": "String"
 								}
 							},
 							{
@@ -1006,7 +1024,8 @@
 									"path": "$['mentionedUsers'][0]['description']"
 								},
 								"sink": {
-									"name": "mentionedUsers_description"
+									"name": "mentionedUsers_description",
+									"type": "String"
 								}
 							},
 							{
@@ -1014,7 +1033,8 @@
 									"path": "$['mentionedUsers'][0]['rawDescription']"
 								},
 								"sink": {
-									"name": "mentionedUsers_rawDescription"
+									"name": "mentionedUsers_rawDescription",
+									"type": "String"
 								}
 							},
 							{
@@ -1022,7 +1042,8 @@
 									"path": "$['mentionedUsers'][0]['descriptionUrls']"
 								},
 								"sink": {
-									"name": "mentionedUsers_descriptionUrls"
+									"name": "mentionedUsers_descriptionUrls",
+									"type": "String"
 								}
 							},
 							{
@@ -1030,7 +1051,8 @@
 									"path": "$['mentionedUsers'][0]['verified']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['verified"
+									"name": "mentionedUsers_verified",
+									"type": "String"
 								}
 							},
 							{
@@ -1038,7 +1060,8 @@
 									"path": "$['mentionedUsers'][0]['created']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['created"
+									"name": "mentionedUsers_created",
+									"type": "String"
 								}
 							},
 							{
@@ -1046,7 +1069,8 @@
 									"path": "$['mentionedUsers'][0]['followersCount']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['followersCount"
+									"name": "mentionedUsers_followersCount",
+									"type": "String"
 								}
 							},
 							{
@@ -1054,7 +1078,8 @@
 									"path": "$['mentionedUsers'][0]['friendsCount']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['friendsCount"
+									"name": "mentionedUsers_friendsCount",
+									"type": "String"
 								}
 							},
 							{
@@ -1062,7 +1087,8 @@
 									"path": "$['mentionedUsers'][0]['statusesCount']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['statusesCount"
+									"name": "mentionedUsers_statusesCount",
+									"type": "String"
 								}
 							},
 							{
@@ -1070,7 +1096,8 @@
 									"path": "$['mentionedUsers'][0]['favouritesCount']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['favouritesCount"
+									"name": "mentionedUsers_favouritesCount",
+									"type": "String"
 								}
 							},
 							{
@@ -1078,7 +1105,8 @@
 									"path": "$['mentionedUsers'][0]['listedCount']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['listedCount"
+									"name": "mentionedUsers_listedCount",
+									"type": "String"
 								}
 							},
 							{
@@ -1086,7 +1114,8 @@
 									"path": "$['mentionedUsers'][0]['mediaCount']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['mediaCount"
+									"name": "mentionedUsers_mediaCount",
+									"type": "String"
 								}
 							},
 							{
@@ -1094,7 +1123,8 @@
 									"path": "$['mentionedUsers'][0]['location']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['location"
+									"name": "mentionedUsers_location",
+									"type": "String"
 								}
 							},
 							{
@@ -1102,7 +1132,8 @@
 									"path": "$['mentionedUsers'][0]['protected']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['protected"
+									"name": "mentionedUsers_protected",
+									"type": "String"
 								}
 							},
 							{
@@ -1110,7 +1141,8 @@
 									"path": "$['mentionedUsers'][0]['linkUrl']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['linkUrl"
+									"name": "mentionedUsers_linkUrl",
+									"type": "String"
 								}
 							},
 							{
@@ -1118,7 +1150,8 @@
 									"path": "$['mentionedUsers'][0]['linkTcourl']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['linkTcourl"
+									"name": "mentionedUsers_linkTcourl",
+									"type": "String"
 								}
 							},
 							{
@@ -1126,7 +1159,8 @@
 									"path": "$['mentionedUsers'][0]['profileImageUrl']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['profileImageUrl"
+									"name": "mentionedUsers_profileImageUrl",
+									"type": "String"
 								}
 							},
 							{
@@ -1134,7 +1168,8 @@
 									"path": "$['mentionedUsers'][0]['profileBannerUrl']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['profileBannerUrl"
+									"name": "mentionedUsers_profileBannerUrl",
+									"type": "String"
 								}
 							},
 							{
@@ -1142,7 +1177,8 @@
 									"path": "$['mentionedUsers'][0]['url']"
 								},
 								"sink": {
-									"name": "mentionedUsers'][0]['url"
+									"name": "mentionedUsers_url",
+									"type": "String"
 								}
 							}
 						],
