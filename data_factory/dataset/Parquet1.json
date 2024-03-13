@@ -1,0 +1,29 @@
+{
+	"name": "Parquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filePath": {
+				"type": "String",
+				"defaultValue": "farmers-protest-tweets-2021-2-4.parquet"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().filePath",
+					"type": "Expression"
+				},
+				"fileSystem": "business"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
