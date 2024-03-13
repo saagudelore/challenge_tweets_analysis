@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "json_csv",
 	"properties": {
 		"activities": [
 			{
@@ -268,15 +268,6 @@
 							},
 							{
 								"source": {
-									"path": "$['user']['descriptionUrls'][0]"
-								},
-								"sink": {
-									"name": "user_descriptionUrls",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
 									"path": "$['outlinks'][0]"
 								},
 								"sink": {
@@ -424,7 +415,8 @@
 									"path": "$['media'][0]['type']"
 								},
 								"sink": {
-									"name": "media_type"
+									"name": "media_type",
+									"type": "String"
 								}
 							},
 							{
@@ -752,15 +744,6 @@
 							},
 							{
 								"source": {
-									"path": "$['quotedTweet']['user']['descriptionUrls'][0]"
-								},
-								"sink": {
-									"name": "quotedTweet_user_descriptionUrls",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
 									"path": "$['quotedTweet']['outlinks'][0]"
 								},
 								"sink": {
@@ -782,7 +765,8 @@
 									"path": "$['quotedTweet']['media'][0]['previewUrl']"
 								},
 								"sink": {
-									"name": "quotedTweet_media_previewUrl"
+									"name": "quotedTweet_media_previewUrl",
+									"type": "String"
 								}
 							},
 							{
@@ -845,15 +829,6 @@
 								},
 								"sink": {
 									"name": "quotedTweet_mentionedUsers_rawDescription",
-									"type": "String"
-								}
-							},
-							{
-								"source": {
-									"path": "$['quotedTweet']['mentionedUsers'][0]['descriptionUrls']"
-								},
-								"sink": {
-									"name": "quotedTweet_mentionedUsers_descriptionUrls",
 									"type": "String"
 								}
 							},
