@@ -15,10 +15,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().sourceFilePath",
-					"type": "Expression"
-				},
+				"fileName": "farmers-protest-tweets-2021-2-4.json",
 				"fileSystem": "business"
 			}
 		},
