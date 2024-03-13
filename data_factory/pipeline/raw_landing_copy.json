@@ -1,5 +1,5 @@
 {
-	"name": "copy_json_csv",
+	"name": "raw_landing_copy",
 	"properties": {
 		"activities": [
 			{
@@ -14,7 +14,7 @@
 					},
 					"ifFalseActivities": [
 						{
-							"name": "Copy data",
+							"name": "Copy CSV",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -1189,7 +1189,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"sinkFileName": {
-											"value": "@pipeline().parameters.sourceFilePath",
+											"value": "@pipeline().parameters.sinkFilePath",
 											"type": "Expression"
 										}
 									}
@@ -1199,7 +1199,7 @@
 					],
 					"ifTrueActivities": [
 						{
-							"name": "Copy data_copy1_copy1",
+							"name": "Copy Parquet",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -2363,7 +2363,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"filePath": {
-											"value": "@pipeline().parameters.sourceFilePath",
+											"value": "@pipeline().parameters.sinkFilePath",
 											"type": "Expression"
 										}
 									}
