@@ -1,0 +1,53 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Json1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "aggregate1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          url as string,",
+				"          date as string,",
+				"          content as string,",
+				"          renderedContent as string,",
+				"          id as integer,",
+				"          user as (username as string, displayname as string, id as integer, description as string, rawDescription as string, descriptionUrls as string[], verified as boolean, created as string, followersCount as integer, friendsCount as integer, statusesCount as integer, favouritesCount as integer, listedCount as integer, mediaCount as integer, location as string, protected as boolean, linkUrl as string, linkTcourl as string, profileImageUrl as string, profileBannerUrl as string, url as string),",
+				"          outlinks as string[],",
+				"          tcooutlinks as string[],",
+				"          replyCount as integer,",
+				"          retweetCount as integer,",
+				"          likeCount as integer,",
+				"          quoteCount as integer,",
+				"          conversationId as integer,",
+				"          lang as string,",
+				"          source as string,",
+				"          sourceUrl as string,",
+				"          sourceLabel as string,",
+				"          media as (thumbnailUrl as string, variants as (contentType as string, url as string, bitrate as integer)[], duration as double, type as string)[],",
+				"          retweetedTweet as string,",
+				"          quotedTweet as (url as string, date as string, content as string, renderedContent as string, id as integer, user as (username as string, displayname as string, id as integer, description as string, rawDescription as string, descriptionUrls as string[], verified as boolean, created as string, followersCount as integer, friendsCount as integer, statusesCount as integer, favouritesCount as integer, listedCount as integer, mediaCount as integer, location as string, protected as boolean, linkUrl as string, linkTcourl as string, profileImageUrl as string, profileBannerUrl as string, url as string), outlinks as string[], tcooutlinks as string[], replyCount as integer, retweetCount as integer, likeCount as integer, quoteCount as integer, conversationId as integer, lang as string, source as string, sourceUrl as string, sourceLabel as string, media as (previewUrl as string, fullUrl as string, type as string)[], retweetedTweet as string, quotedTweet as string, mentionedUsers as (username as string, displayname as string, id as integer, description as string, rawDescription as string, descriptionUrls as string, verified as string, created as string, followersCount as string, friendsCount as string, statusesCount as string, favouritesCount as string, listedCount as string, mediaCount as string, location as string, protected as string, linkUrl as string, linkTcourl as string, profileImageUrl as string, profileBannerUrl as string, url as string)[]),",
+				"          mentionedUsers as (username as string, displayname as string, id as integer, description as string, rawDescription as string, descriptionUrls as string, verified as string, created as string, followersCount as string, friendsCount as string, statusesCount as string, favouritesCount as string, listedCount as string, mediaCount as string, location as string, protected as string, linkUrl as string, linkTcourl as string, profileImageUrl as string, profileBannerUrl as string, url as string)[]",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false,",
+				"     documentForm: 'documentPerLine') ~> source1",
+				"source1 aggregate() ~> aggregate1"
+			]
+		}
+	}
+}
