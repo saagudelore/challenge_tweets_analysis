@@ -5,11 +5,20 @@
 			"referenceName": "ls_HttpServer1",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"drive_path": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation"
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().drive_path",
+					"type": "Expression"
+				}
 			}
 		},
 		"schema": {}

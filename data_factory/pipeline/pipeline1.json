@@ -50,12 +50,6 @@
 				]
 			}
 		],
-		"parameters": {
-			"drive_path": {
-				"type": "string",
-				"defaultValue": "/uc?id=1ig2ngoXFTxP5Pa8muXo02mDTFexZzsis"
-			}
-		},
 		"annotations": []
 	}
 }
