@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Copy data2",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -16,14 +16,14 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "ParquetSource",
+						"type": "JsonSource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
-							"type": "ParquetReadSettings"
+							"type": "JsonReadSettings"
 						}
 					},
 					"sink": {
@@ -40,19 +40,1121 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
+						"mappings": [
+							{
+								"source": {
+									"path": "$['url']"
+								},
+								"sink": {
+									"name": "url",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['date']"
+								},
+								"sink": {
+									"name": "date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"path": "$['content']"
+								},
+								"sink": {
+									"name": "content",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['renderedContent']"
+								},
+								"sink": {
+									"name": "renderedContent",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['id']"
+								},
+								"sink": {
+									"name": "id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['username']"
+								},
+								"sink": {
+									"name": "user_username",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['displayname']"
+								},
+								"sink": {
+									"name": "user_displayname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['id']"
+								},
+								"sink": {
+									"name": "user_id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['description']"
+								},
+								"sink": {
+									"name": "user_description",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['rawDescription']"
+								},
+								"sink": {
+									"name": "user_rawDescription",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['verified']"
+								},
+								"sink": {
+									"name": "user_verified",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['created']"
+								},
+								"sink": {
+									"name": "user_created",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['followersCount']"
+								},
+								"sink": {
+									"name": "user_followersCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['friendsCount']"
+								},
+								"sink": {
+									"name": "user_friendsCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['statusesCount']"
+								},
+								"sink": {
+									"name": "user_statusesCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['favouritesCount']"
+								},
+								"sink": {
+									"name": "user_favouritesCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['listedCount']"
+								},
+								"sink": {
+									"name": "user_listedCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['mediaCount']"
+								},
+								"sink": {
+									"name": "user_mediaCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['location']"
+								},
+								"sink": {
+									"name": "user_location",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['protected']"
+								},
+								"sink": {
+									"name": "user_protected",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['linkUrl']"
+								},
+								"sink": {
+									"name": "user_linkUrl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['linkTcourl']"
+								},
+								"sink": {
+									"name": "user_linkTcourl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['profileImageUrl']"
+								},
+								"sink": {
+									"name": "user_profileImageUrl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['profileBannerUrl']"
+								},
+								"sink": {
+									"name": "user_profileBannerUrl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['url']"
+								},
+								"sink": {
+									"name": "user_url",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['user']['descriptionUrls'][0]"
+								},
+								"sink": {
+									"name": "user_descriptionUrls",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['outlinks'][0]"
+								},
+								"sink": {
+									"name": "outlinks",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['tcooutlinks'][0]"
+								},
+								"sink": {
+									"name": "tcooutlinks",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['replyCount']"
+								},
+								"sink": {
+									"name": "replyCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['retweetCount']"
+								},
+								"sink": {
+									"name": "retweetCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['likeCount']"
+								},
+								"sink": {
+									"name": "likeCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quoteCount']"
+								},
+								"sink": {
+									"name": "quoteCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['conversationId']"
+								},
+								"sink": {
+									"name": "conversationId",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['lang']"
+								},
+								"sink": {
+									"name": "lang",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['source']"
+								},
+								"sink": {
+									"name": "source",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['sourceUrl']"
+								},
+								"sink": {
+									"name": "sourceUrl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['sourceLabel']"
+								},
+								"sink": {
+									"name": "sourceLabel",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['media'][0]['thumbnailUrl']"
+								},
+								"sink": {
+									"name": "media_thumbnailUrl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['media'][0]['variants'][0]['contentType']"
+								},
+								"sink": {
+									"name": "media_variants_contentType",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['media'][0]['variants'][0]['url']"
+								},
+								"sink": {
+									"name": "media_variants_url",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['media'][0]['variants'][0]['bitrate']"
+								},
+								"sink": {
+									"name": "media_variants_bitrate",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['media'][0]['duration']"
+								},
+								"sink": {
+									"name": "media_duration",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['media'][0]['type']"
+								},
+								"sink": {
+									"name": "media_type"
+								}
+							},
+							{
+								"source": {
+									"path": "$['retweetedTweet']"
+								},
+								"sink": {
+									"name": "retweetedTweet",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['url']"
+								},
+								"sink": {
+									"name": "quotedTweet_url",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['date']"
+								},
+								"sink": {
+									"name": "quotedTweet_date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['content']"
+								},
+								"sink": {
+									"name": "quotedTweet_content",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['renderedContent']"
+								},
+								"sink": {
+									"name": "quotedTweet_renderedContent",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['id']"
+								},
+								"sink": {
+									"name": "quotedTweet_id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['username']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_usernameeet_"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['displayname']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_displayname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['id']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['description']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_description",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['rawDescription']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_rawDescription",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['verified']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_verified",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['created']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_created",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['followersCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_followersCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['friendsCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_friendsCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['statusesCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_statusesCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['favouritesCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_favouritesCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['listedCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_listedCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['mediaCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_mediaCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['location']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_location",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['protected']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_protected",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['linkUrl']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_linkUrl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['linkTcourl']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_linkTcourl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['profileImageUrl']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_profileImageUrl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['profileBannerUrl']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_profileBannerUrl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['url']"
+								},
+								"sink": {
+									"name": "quotedTweet_user_url",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['replyCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_replyCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['retweetCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_retweetCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['likeCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_likeCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['quoteCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_quoteCount",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['conversationId']"
+								},
+								"sink": {
+									"name": "quotedTweet_conversationId",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['lang']"
+								},
+								"sink": {
+									"name": "quotedTweet_lang",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['source']"
+								},
+								"sink": {
+									"name": "quotedTweet_source",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['sourceUrl']"
+								},
+								"sink": {
+									"name": "quotedTweet_sourceUrl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['sourceLabel']"
+								},
+								"sink": {
+									"name": "quotedTweet_sourceLabel",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['retweetedTweet']"
+								},
+								"sink": {
+									"name": "quotedTweet_retweetedTweet",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['user']['descriptionUrls'][0]"
+								},
+								"sink": {
+									"name": "quotedTweet_user_descriptionUrls",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['outlinks'][0]"
+								},
+								"sink": {
+									"name": "quotedTweet_outlinks",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['tcooutlinks'][0]"
+								},
+								"sink": {
+									"name": "quotedTweet_tcooutlinks",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['media'][0]['previewUrl']"
+								},
+								"sink": {
+									"name": "quotedTweet_media_previewUrl"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['media'][0]['fullUrl']"
+								},
+								"sink": {
+									"name": "quotedTweet_media_fullUrl",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['media'][0]['type']"
+								},
+								"sink": {
+									"name": "quotedTweet_media_type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['username']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_username",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['displayname']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_displayname",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['id']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['description']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_description",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['rawDescription']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_rawDescription",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['descriptionUrls']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_descriptionUrls",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['verified']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_verified"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['created']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_created"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['followersCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_followersCount"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['friendsCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_friendsCount"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['statusesCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_statusesCount"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['favouritesCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_favouritesCount"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['listedCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_listedCount"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['mediaCount']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_mediaCount"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['location']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_location"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['protected']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_protected"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['linkUrl']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_linkUrl"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['linkTcourl']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_linkTcourl"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['profileImageUrl']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_profileImageUrl"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['profileBannerUrl']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_profileBannerUrl"
+								}
+							},
+							{
+								"source": {
+									"path": "$['quotedTweet']['mentionedUsers'][0]['url']"
+								},
+								"sink": {
+									"name": "quotedTweet_mentionedUsers_url"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['username']"
+								},
+								"sink": {
+									"name": "mentionedUsers_username"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['displayname']"
+								},
+								"sink": {
+									"name": "mentionedUsers_displayname"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['id']"
+								},
+								"sink": {
+									"name": "mentionedUsers_id"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['description']"
+								},
+								"sink": {
+									"name": "mentionedUsers_description"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['rawDescription']"
+								},
+								"sink": {
+									"name": "mentionedUsers_rawDescription"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['descriptionUrls']"
+								},
+								"sink": {
+									"name": "mentionedUsers_descriptionUrls"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['verified']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['verified"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['created']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['created"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['followersCount']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['followersCount"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['friendsCount']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['friendsCount"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['statusesCount']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['statusesCount"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['favouritesCount']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['favouritesCount"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['listedCount']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['listedCount"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['mediaCount']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['mediaCount"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['location']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['location"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['protected']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['protected"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['linkUrl']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['linkUrl"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['linkTcourl']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['linkTcourl"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['profileImageUrl']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['profileImageUrl"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['profileBannerUrl']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['profileBannerUrl"
+								}
+							},
+							{
+								"source": {
+									"path": "$['mentionedUsers'][0]['url']"
+								},
+								"sink": {
+									"name": "mentionedUsers'][0]['url"
+								}
+							}
+						],
+						"mapComplexValuesToString": false
 					}
 				},
 				"inputs": [
 					{
-						"referenceName": "Parquet1",
+						"referenceName": "Json1",
 						"type": "DatasetReference",
 						"parameters": {
-							"filePath": {
+							"sourceFilePath": {
 								"value": "@pipeline().parameters.sourceFilePath",
 								"type": "Expression"
 							}
@@ -65,7 +1167,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"sinkFileName": {
-								"value": "@pipeline().parameters.sinkFilePath",
+								"value": "@pipeline().parameters.sourceFilePath",
 								"type": "Expression"
 							}
 						}
@@ -76,7 +1178,7 @@
 		"parameters": {
 			"sourceFilePath": {
 				"type": "string",
-				"defaultValue": "farmers-protest-tweets-2021-2-4.parquet"
+				"defaultValue": "farmers-protest-tweets-2021-2-4.json"
 			},
 			"sinkFilePath": {
 				"type": "string",
