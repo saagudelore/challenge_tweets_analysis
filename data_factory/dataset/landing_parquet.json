@@ -1,31 +1,27 @@
 {
-	"name": "landing_csv",
+	"name": "landing_parquet",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"sinkFileName": {
-				"type": "String",
-				"defaultValue": "data.csv"
+			"filePath": {
+				"type": "String"
 			}
 		},
 		"annotations": [],
-		"type": "DelimitedText",
+		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().sinkFileName",
+					"value": "@dataset().filePath",
 					"type": "Expression"
 				},
 				"fileSystem": "landing"
 			},
-			"columnDelimiter": "|",
-			"escapeChar": "\\",
-			"firstRowAsHeader": true,
-			"quoteChar": "\""
+			"compressionCodec": "snappy"
 		},
 		"schema": []
 	}

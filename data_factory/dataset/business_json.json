@@ -1,5 +1,5 @@
 {
-	"name": "Json1",
+	"name": "business_json",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_AzureDataLakeStorage1",

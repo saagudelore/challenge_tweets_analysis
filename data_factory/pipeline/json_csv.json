@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data2",
+				"name": "Copy data",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -1162,7 +1162,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Json1",
+						"referenceName": "business_json",
 						"type": "DatasetReference",
 						"parameters": {
 							"sourceFilePath": {
@@ -1174,7 +1174,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "landing_csv",
 						"type": "DatasetReference",
 						"parameters": {
 							"sinkFileName": {
