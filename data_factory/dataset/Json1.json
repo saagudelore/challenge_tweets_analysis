@@ -19,6 +19,461 @@
 				"fileSystem": "business"
 			}
 		},
-		"schema": {}
+		"schema": {
+			"type": "object",
+			"properties": {
+				"url": {
+					"type": "string"
+				},
+				"date": {
+					"type": "string"
+				},
+				"content": {
+					"type": "string"
+				},
+				"renderedContent": {
+					"type": "string"
+				},
+				"id": {
+					"type": "integer"
+				},
+				"user": {
+					"type": "object",
+					"properties": {
+						"username": {
+							"type": "string"
+						},
+						"displayname": {
+							"type": "string"
+						},
+						"id": {
+							"type": "integer"
+						},
+						"description": {
+							"type": "string"
+						},
+						"rawDescription": {
+							"type": "string"
+						},
+						"descriptionUrls": {
+							"type": "array"
+						},
+						"verified": {
+							"type": "boolean"
+						},
+						"created": {
+							"type": "string"
+						},
+						"followersCount": {
+							"type": "integer"
+						},
+						"friendsCount": {
+							"type": "integer"
+						},
+						"statusesCount": {
+							"type": "integer"
+						},
+						"favouritesCount": {
+							"type": "integer"
+						},
+						"listedCount": {
+							"type": "integer"
+						},
+						"mediaCount": {
+							"type": "integer"
+						},
+						"location": {
+							"type": "string"
+						},
+						"protected": {
+							"type": "boolean"
+						},
+						"linkUrl": {
+							"type": "string"
+						},
+						"linkTcourl": {
+							"type": "string"
+						},
+						"profileImageUrl": {
+							"type": "string"
+						},
+						"profileBannerUrl": {
+							"type": "string"
+						},
+						"url": {
+							"type": "string"
+						}
+					}
+				},
+				"outlinks": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"tcooutlinks": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"replyCount": {
+					"type": "integer"
+				},
+				"retweetCount": {
+					"type": "integer"
+				},
+				"likeCount": {
+					"type": "integer"
+				},
+				"quoteCount": {
+					"type": "integer"
+				},
+				"conversationId": {
+					"type": "integer"
+				},
+				"lang": {
+					"type": "string"
+				},
+				"source": {
+					"type": "string"
+				},
+				"sourceUrl": {
+					"type": "string"
+				},
+				"sourceLabel": {
+					"type": "string"
+				},
+				"media": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"thumbnailUrl": {
+								"type": "string"
+							},
+							"variants": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"contentType": {
+											"type": "string"
+										},
+										"url": {
+											"type": "string"
+										},
+										"bitrate": {
+											"type": "integer"
+										}
+									}
+								}
+							},
+							"duration": {
+								"type": "number"
+							},
+							"type": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"retweetedTweet": {
+					"type": "null"
+				},
+				"quotedTweet": {
+					"type": "object",
+					"properties": {
+						"url": {
+							"type": "string"
+						},
+						"date": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						},
+						"renderedContent": {
+							"type": "string"
+						},
+						"id": {
+							"type": "integer"
+						},
+						"user": {
+							"type": "object",
+							"properties": {
+								"username": {
+									"type": "string"
+								},
+								"displayname": {
+									"type": "string"
+								},
+								"id": {
+									"type": "integer"
+								},
+								"description": {
+									"type": "string"
+								},
+								"rawDescription": {
+									"type": "string"
+								},
+								"descriptionUrls": {
+									"type": "array"
+								},
+								"verified": {
+									"type": "boolean"
+								},
+								"created": {
+									"type": "string"
+								},
+								"followersCount": {
+									"type": "integer"
+								},
+								"friendsCount": {
+									"type": "integer"
+								},
+								"statusesCount": {
+									"type": "integer"
+								},
+								"favouritesCount": {
+									"type": "integer"
+								},
+								"listedCount": {
+									"type": "integer"
+								},
+								"mediaCount": {
+									"type": "integer"
+								},
+								"location": {
+									"type": "string"
+								},
+								"protected": {
+									"type": "boolean"
+								},
+								"linkUrl": {
+									"type": "string"
+								},
+								"linkTcourl": {
+									"type": "string"
+								},
+								"profileImageUrl": {
+									"type": "string"
+								},
+								"profileBannerUrl": {
+									"type": "string"
+								},
+								"url": {
+									"type": "string"
+								}
+							}
+						},
+						"outlinks": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"tcooutlinks": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						},
+						"replyCount": {
+							"type": "integer"
+						},
+						"retweetCount": {
+							"type": "integer"
+						},
+						"likeCount": {
+							"type": "integer"
+						},
+						"quoteCount": {
+							"type": "integer"
+						},
+						"conversationId": {
+							"type": "integer"
+						},
+						"lang": {
+							"type": "string"
+						},
+						"source": {
+							"type": "string"
+						},
+						"sourceUrl": {
+							"type": "string"
+						},
+						"sourceLabel": {
+							"type": "string"
+						},
+						"media": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"previewUrl": {
+										"type": "string"
+									},
+									"fullUrl": {
+										"type": "string"
+									},
+									"type": {
+										"type": "string"
+									}
+								}
+							}
+						},
+						"retweetedTweet": {
+							"type": "null"
+						},
+						"quotedTweet": {
+							"type": "null"
+						},
+						"mentionedUsers": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"username": {
+										"type": "string"
+									},
+									"displayname": {
+										"type": "string"
+									},
+									"id": {
+										"type": "integer"
+									},
+									"description": {
+										"type": "null"
+									},
+									"rawDescription": {
+										"type": "null"
+									},
+									"descriptionUrls": {
+										"type": "null"
+									},
+									"verified": {
+										"type": "null"
+									},
+									"created": {
+										"type": "null"
+									},
+									"followersCount": {
+										"type": "null"
+									},
+									"friendsCount": {
+										"type": "null"
+									},
+									"statusesCount": {
+										"type": "null"
+									},
+									"favouritesCount": {
+										"type": "null"
+									},
+									"listedCount": {
+										"type": "null"
+									},
+									"mediaCount": {
+										"type": "null"
+									},
+									"location": {
+										"type": "null"
+									},
+									"protected": {
+										"type": "null"
+									},
+									"linkUrl": {
+										"type": "null"
+									},
+									"linkTcourl": {
+										"type": "null"
+									},
+									"profileImageUrl": {
+										"type": "null"
+									},
+									"profileBannerUrl": {
+										"type": "null"
+									},
+									"url": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				},
+				"mentionedUsers": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"username": {
+								"type": "string"
+							},
+							"displayname": {
+								"type": "string"
+							},
+							"id": {
+								"type": "integer"
+							},
+							"description": {
+								"type": "null"
+							},
+							"rawDescription": {
+								"type": "null"
+							},
+							"descriptionUrls": {
+								"type": "null"
+							},
+							"verified": {
+								"type": "null"
+							},
+							"created": {
+								"type": "null"
+							},
+							"followersCount": {
+								"type": "null"
+							},
+							"friendsCount": {
+								"type": "null"
+							},
+							"statusesCount": {
+								"type": "null"
+							},
+							"favouritesCount": {
+								"type": "null"
+							},
+							"listedCount": {
+								"type": "null"
+							},
+							"mediaCount": {
+								"type": "null"
+							},
+							"location": {
+								"type": "null"
+							},
+							"protected": {
+								"type": "null"
+							},
+							"linkUrl": {
+								"type": "null"
+							},
+							"linkTcourl": {
+								"type": "null"
+							},
+							"profileImageUrl": {
+								"type": "null"
+							},
+							"profileBannerUrl": {
+								"type": "null"
+							},
+							"url": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
