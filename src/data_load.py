@@ -47,8 +47,8 @@ def download_and_save_files(container_client, destination_folder='../data/'):
             print(f"Saved CSV file '{blob_name}' in '{destination_folder}'")
         elif 'parquet' in sas_url:
             df = pd.read_parquet(sas_url)
-            df.to_parquet(f"{destination_folder}{blob_name[:-4]}parquet")
-            print(f"Saved Parquet file '{blob_name[:-4]}parquet' in '{destination_folder}'")
+            df.to_parquet(f"{destination_folder}{blob_name[:-4]}")
+            print(f"Saved Parquet file '{blob_name[:-4]}' in '{destination_folder}'")
         else:
             print("No files in storage")
 
