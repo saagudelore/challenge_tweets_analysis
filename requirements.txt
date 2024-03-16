@@ -1,1 +1,11 @@
 memory-profiler==0.61.0
+azure-common==1.1.28
+azure-core==1.29.4
+azure-identity==1.15.0
+azure-maps-search==1.0.0b2
+azure-mgmt-core==1.4.0
+azure-storage-blob==12.19.1
+pandas==2.0.3
+unicodedata2==15.1.0
+typing_extensions==4.8.0
+memory-profiler==0.61.0
